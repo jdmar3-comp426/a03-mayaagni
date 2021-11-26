@@ -58,12 +58,12 @@ export function maxAndMin(numbers) {
  */
 export function countArray(array) {
     let arrMap = new Map();
-    for (let i = 0; i < array.length(); i++) {
+    for (let i = 0; i < array.length; i++) {
         let count = 0;
         if (arrMap.has(array[i])) {
 
         } else {
-            for (let j = 0; j < array.length(); j++) {
+            for (let j = 0; j < array.length; j++) {
                 if(array[i] == array[j]) {
                     count++;
                 }
