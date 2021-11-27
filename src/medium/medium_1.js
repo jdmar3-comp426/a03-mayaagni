@@ -11,6 +11,7 @@ export function getSum(array) {
     let sum;
     const reducer = (previousValue, currentValue) => previousValue + currentValue;
     sum = array.reduce(reducer);
+    return sum;
 }
 
 
