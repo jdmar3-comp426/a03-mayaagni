@@ -57,23 +57,25 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-    let arrMap = new Map();
+    
     let newObj = new Object();
     array.sort();
+    let temp = 0;
+
     for (let i = 0; i < array.length; i++) {
         let count = 0;
-        if (arrMap.has(array[i])) {
+
+        if (arr[i]<temp) {
 
         } else {
+            temp = arr[i];
             for (let j = 0; j < array.length; j++) {
                 if(array[i] == array[j]) {
                     count++;
                 }
             }
-            arrMap.set(array[i], count);
-            newObj.array[i] = count;
+            newObj[array[i]] = count;
         }
-        
         
     }
     return newObj;
