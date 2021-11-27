@@ -76,6 +76,6 @@ export function countArray(array) {
         
         
     }
-    return arrMap;
+    return newObj;
 
 }
