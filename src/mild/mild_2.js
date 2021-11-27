@@ -10,8 +10,8 @@ export function identifyVariable(variable) {
    let temp = typeof variable;
    newObj.type = temp;
    newObj.value = variable;
+   return newObj;
 }
-
 
 /**
  *
