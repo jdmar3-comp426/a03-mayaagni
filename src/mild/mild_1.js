@@ -65,7 +65,7 @@ export function countArray(array) {
     for (let i = 0; i < array.length; i++) {
         let count = 0;
 
-        if (arr[i]<temp) {
+        if (array[i]<temp) {
 
         } else {
             temp = arr[i];
