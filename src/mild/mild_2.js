@@ -27,7 +27,15 @@ export function identifyVariable(variable) {
 
  */
 export function identifyArray(array) {
-
+   let arr = new Array();
+   for (let i = 0; i < array.length; i ++) {
+      let temp = typeof array[i];
+      let newObj = new Object();
+      newObj.type = temp;
+      newObj.value = array[i];
+      arr[i] = newObj;
+   }
+   return arr;
 }
 
 /**
