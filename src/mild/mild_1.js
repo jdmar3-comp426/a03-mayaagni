@@ -58,6 +58,8 @@ export function maxAndMin(numbers) {
  */
 export function countArray(array) {
     let arrMap = new Map();
+    let newObj = new Object();
+    array.sort();
     for (let i = 0; i < array.length; i++) {
         let count = 0;
         if (arrMap.has(array[i])) {
@@ -68,9 +70,11 @@ export function countArray(array) {
                     count++;
                 }
             }
+            arrMap.set(array[i], count);
+            newObj.array[i] = count;
         }
         
-        arrMap.set(array[i], count);
+        
     }
     return arrMap;
 
