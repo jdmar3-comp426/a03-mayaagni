@@ -15,7 +15,11 @@
  *                from calling the function
  */
 export const repeat = (fn, n, ...params) => {
-
+    let arr = new Array();
+    for (let i = 0; i < n; i++) {
+        arr[i] = fn(params[i]);
+    }
+    return arr;
 };
 
 
@@ -24,7 +28,9 @@ export const repeat = (fn, n, ...params) => {
  *   10 times.
  */
 export const repeatDemo = () => {
-
+    let a = `Hello, World!`
+    let A = a.repeat();
+    console.log(A);
 };
 
 
@@ -41,7 +47,9 @@ export const repeatDemo = () => {
  *   product of num1 and num2.
  */
 export const multiplyBy = (num1) => {
-
+    return (num2) => {
+        return num1 * num2;
+    }
 };
 
 
