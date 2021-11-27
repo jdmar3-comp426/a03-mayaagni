@@ -57,7 +57,7 @@ export const multiplyBy = (num1) => {
  * Use the multiplyBy function to create and export a function named
  *   "tenTimes" that multiplies a number by 10.
  */
-export const tenTimes = undefined;
+export const tenTimes = multiplyBy(10);
 
 
 /**
@@ -65,7 +65,7 @@ export const tenTimes = undefined;
  *   function to multiply 50 by 10 and returns the result.
  */
 export const tenTimesFifty = () => {
-
+    tenTimes(50);
 };
 
 
@@ -93,7 +93,14 @@ export const tenTimesFifty = () => {
  *    everyEven([1, 1, 0, 1, 1], x => x === 1)  <--  returns false
  */
 export const everyEven = (arr, test) => {
-
+    arr.forEach(element => {
+        if(test(element)) {
+            
+        } else {
+            return false;
+        }
+    });
+    return true;
 };
 
 
@@ -117,7 +124,13 @@ export const everyEven = (arr, test) => {
  *    someEven([0, 0, 0, 0, 0], x => x === 0)  <--  returns true
  */
 export const someEven = (arr, test) => {
-
+    let bool = false;
+    arr.forEach(element => {
+        if(test(element)) {
+            bool = true;
+        } 
+    });
+    return bool;
 };
 
 
@@ -143,7 +156,22 @@ export const someEven = (arr, test) => {
  *       -->  { pass: [1, 5, 31], fail: [90] }
  */
 export const filter = (arr, test) => {
-
+    let newObj = new Object();
+    let arrT = new Array();
+    let arrF = new Array();
+    let tCount = 0;
+    let fCount = 0;
+    arr.forEach(element => {
+        if(test(element)) {
+            arrT[tCount] = element;
+            tCount++;
+        } else {
+            arrF[fCount] = element;
+            fCount++;
+        }
+    });
+    newObj['pass'] = arrT;
+    newObj['fail'] = arrF;
 };
 
 
