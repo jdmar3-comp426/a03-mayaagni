@@ -34,7 +34,7 @@ obj1['highway'] = sum/mpg_data.length;
 let obj2 = new Object();
 let arr2 = mpg_data.map(({ year }) => year);
 let temp2 = getStatistics(arr2);
-obj2['allCarStats'] = temp2;
+obj2 = temp2;
 
 let obj3 = new Object();
 let sum3 = 0;
@@ -43,7 +43,7 @@ mpg_data.forEach(function(element) {
         sum3++;
     }
   })
-obj3['rationHybrids'] = sum3/mpg_data.length;
+obj3 = sum3/mpg_data.length;
  
 export const allCarStats = {
     avgMpg: obj1,
