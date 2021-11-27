@@ -49,8 +49,6 @@ export function getMedian(array) {
   standard_deviation: 1.632993161855452
  }
  */
- import {variance} from "./stats_helper.js";
-
  export function getStatistics(array) {
     let objNew = new Object();
     objNew['length'] = array.length;
