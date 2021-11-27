@@ -93,13 +93,15 @@ export const tenTimesFifty = () => {
  *    everyEven([1, 1, 0, 1, 1], x => x === 1)  <--  returns false
  */
 export const everyEven = (arr, test) => {
-    arr.forEach(element => {
-        if(test(element)) {
+
+    for (let i = 0; i < arr.length; i = i+2) {
+        if(test(arr[i])) {
             
         } else {
             return false;
         }
-    });
+    }
+    
     return true;
 };
 
@@ -124,13 +126,15 @@ export const everyEven = (arr, test) => {
  *    someEven([0, 0, 0, 0, 0], x => x === 0)  <--  returns true
  */
 export const someEven = (arr, test) => {
-    let bool = false;
-    arr.forEach(element => {
-        if(test(element)) {
-            bool = true;
-        } 
-    });
-    return bool;
+    
+    for (let i = 0; i < arr.length; i = i+2) {
+        if(test(arr[i])) {
+            return true;
+        } else {
+           
+        }
+    }
+    return false;
 };
 
 
@@ -172,6 +176,7 @@ export const filter = (arr, test) => {
     });
     newObj['pass'] = arrT;
     newObj['fail'] = arrF;
+    return newObj;
 };
 
 
@@ -181,7 +186,11 @@ export const filter = (arr, test) => {
  *   odd numbers. Use the "everyEven" function in this function.
  */
 export const allEvensAreOdd = (arr) => {
-
+    if(everyEven(arr)) {
+        return false;
+    } else {
+        return true;
+    }
 };
 
 
@@ -191,7 +200,11 @@ export const allEvensAreOdd = (arr) => {
  *   array is an odd number. Use the "someEven" function in this function.
  */
 export const anEvenIsOdd = (arr) => {
-
+    if(!everyEven(arr) || someEven(arr)) {
+        return true;
+    } else{
+        return false;
+    }
 };
 
 
@@ -202,5 +215,10 @@ export const anEvenIsOdd = (arr) => {
  *   pass the test. You must use the filter function.
  */
 export const hasExactly = (arr, test, n) => {
-
+    let obj1 = filter(arr, test, n);
+    if (obj1.arrT === n) {
+        return true;
+    } else {
+        return false;
+    }
 };
