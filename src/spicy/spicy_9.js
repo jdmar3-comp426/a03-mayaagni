@@ -29,7 +29,7 @@ export const repeat = (fn, n, ...params) => {
  */
 export const repeatDemo = () => {
     let a = `Hello, World!`
-    let A = a.repeat();
+    let A = a.repeat(10);
     console.log(A);
 };
 
@@ -65,7 +65,7 @@ export const tenTimes = multiplyBy(10);
  *   function to multiply 50 by 10 and returns the result.
  */
 export const tenTimesFifty = () => {
-    tenTimes(50);
+    tenTimes(5);
 };
 
 
@@ -127,7 +127,7 @@ export const everyEven = (arr, test) => {
  */
 export const someEven = (arr, test) => {
     
-    for (let i = 0; i < arr.length; i = i+2) {
+    for (let i = 2; i < arr.length; i = i+2) {
         if(test(arr[i])) {
             return true;
         } else {
