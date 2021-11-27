@@ -49,7 +49,17 @@ export function getMedian(array) {
   standard_deviation: 1.632993161855452
  }
  */
-export function getStatistics(array) {
+ import {variance} from "./stats_helper.js";
 
+ export function getStatistics(array) {
+    let objNew = new Object();
+    objNew['length'] = array.length;
+    objNew[sum] = getSum(array);
+    objNew[mean] = getSum(array)/array.length;
+    objNew[median] = getMedian(array);
+    objNew[min] = Math.min(array);
+    objNew[max] = Math.max(array);
+    objNew['variance'] = variance(array, objNew.mean);
+    objNew[standard_deviation] = Math.sqrt(objNew.variance);
 }
 
