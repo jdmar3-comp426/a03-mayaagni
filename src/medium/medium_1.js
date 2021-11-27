@@ -61,5 +61,6 @@ export function getMedian(array) {
     objNew[max] = Math.max(array);
     objNew['variance'] = variance(array, objNew.mean);
     objNew[standard_deviation] = Math.sqrt(objNew.variance);
+    return objNew;
 }
 
