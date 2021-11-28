@@ -28,7 +28,7 @@ export const repeat = (fn, n, ...params) => {
  *   10 times.
  */
 export const repeatDemo = () => {
-    let a = " Hello, World!"
+    let a = " Hello, world!"
     for(let i = 0; i < 10; i ++) {
         console.log(" " + a);
     }
