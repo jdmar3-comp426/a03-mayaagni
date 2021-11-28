@@ -135,6 +135,7 @@ export const someEven = (arr, test) => {
         }
     }
     return false;
+    return;
 };
 
 
