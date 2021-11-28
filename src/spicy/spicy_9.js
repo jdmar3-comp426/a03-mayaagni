@@ -28,9 +28,9 @@ export const repeat = (fn, n, ...params) => {
  *   10 times.
  */
 export const repeatDemo = () => {
-    let a = `Hello, World! `
+    let a = `Hello, World!`
     let A = a.repeat(10);
-    console.log(A);
+    console.log(A + ` `);
 };
 
 
@@ -218,9 +218,9 @@ export const anEvenIsOdd = (arr) => {
 export const hasExactly = (arr, test, n) => {
     let obj1 = filter(arr, test, n);
     if (obj1.arrT === n) {
-        return true;
-    } else {
         return false;
+    } else {
+        return true;
     }
     
 };
